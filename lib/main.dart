@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ir_sensor_plugin/ir_sensor_plugin.dart';
+import 'package:ledcontrol/widgets/remote_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -84,6 +85,8 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text('Running on: $_platformVersion\n'),
             Text('Has Ir Emitter: $_hasIrEmitter\n'),
+            Container(height: 15),
+            const RemoteWidget(),
           ],
         ),
       ),
