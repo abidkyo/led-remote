@@ -83,10 +83,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Running on: $_platformVersion\n'),
-            Text('Has Ir Emitter: $_hasIrEmitter\n'),
-            Container(height: 15),
-            const RemoteWidget(),
+            if (!_hasIrEmitter) ...[
+              Text('Running on: $_platformVersion\n'),
+              Text('Has Ir Emitter: $_hasIrEmitter\n'),
+            ] else
+              const RemoteWidget(),
           ],
         ),
       ),
