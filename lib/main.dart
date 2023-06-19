@@ -4,6 +4,11 @@ import 'package:ir_sensor_plugin/ir_sensor_plugin.dart';
 import 'package:ledremote/widgets/remote_widget.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(const MyApp());
 }
 
