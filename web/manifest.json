@@ -1,6 +1,6 @@
 {
-    "name": "ledcontrol",
-    "short_name": "ledcontrol",
+    "name": "ledremote",
+    "short_name": "ledremote",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ir_sensor_plugin/ir_sensor_plugin.dart';
-import 'package:ledcontrol/widgets/remote_widget.dart';
+import 'package:ledremote/widgets/remote_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +10,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  final _title = 'LED Control';
+  final _title = 'LED Remote';
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,4 @@
-# ledcontrol
+# LED Remote
 
 A new Flutter project.
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ir_sensor_plugin/ir_sensor_plugin.dart';
-import 'package:ledcontrol/data.dart';
-import 'package:ledcontrol/models/remote_data.dart';
+import 'package:ledremote/data.dart';
+import 'package:ledremote/models/remote_data.dart';
 
 class RemoteWidget extends StatelessWidget {
   const RemoteWidget({super.key});

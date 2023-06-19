@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ledcontrol/models/remote_data.dart';
+import 'package:ledremote/models/remote_data.dart';
 
 List<RemoteData> remoteData = [
   // row 1

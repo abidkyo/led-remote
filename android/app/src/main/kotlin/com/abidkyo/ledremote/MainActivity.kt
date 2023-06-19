@@ -1,4 +1,4 @@
-package com.example.ledcontrol
+package com.abidkyo.ledremote
 
 import io.flutter.embedding.android.FlutterActivity
 
