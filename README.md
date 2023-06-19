@@ -1,16 +1,22 @@
 # LED Remote
 
-A new Flutter project.
+LED remote control application using Flutter for Magic Lighting RGB LED.
 
-## Getting Started
+## Resources
 
-This project is a starting point for a Flutter application.
+- [Magic Lighting IR Code](https://docs.google.com/spreadsheets/d/1pGp-7BIC4l7Ogg4i09QTNGyKOmQkkMjxEph5mRSQdFA/edit?usp=sharing)
+- [IR Code to HEX Code Converter](https://github.com/abidkyo/nec-converter)
 
-A few resources to get you started if this is your first Flutter project:
+## Dependencies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [ir_sensor_plugin](https://pub.dev/packages/ir_sensor_plugin)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Permissions
+
+- android.permission.TRANSMIT_IR
+
+## Notes
+
+- Flutter 3.10.1
+- Dart 3.0.1
+- Android 11
