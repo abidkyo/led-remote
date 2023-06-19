@@ -11,19 +11,25 @@ class RemoteWidget extends StatelessWidget {
     return SizedBox(
       width: 220,
       child: Wrap(
-        alignment: WrapAlignment.center,
+        alignment: WrapAlignment.spaceAround,
         spacing: 5,
-        runSpacing: 10,
-        children: remoteData.map((data) => RemoteButton(data: data)).toList(),
+        runSpacing: 15,
+        children: [
+          ...remoteData.sublist(4).map((data) => RemoteButton(data: data)),
+          ...remoteData
+              .sublist(0, 4)
+              .map((data) => RemoteButton(data: data, big: true)),
+        ],
       ),
     );
   }
 }
 
 class RemoteButton extends StatelessWidget {
-  const RemoteButton({super.key, required this.data});
+  const RemoteButton({super.key, required this.data, this.big = false});
 
   final RemoteData data;
+  final bool big;
 
   void _transmitCode(String code) async {
     final String result = await IrSensorPlugin.transmitString(pattern: code);
@@ -33,13 +39,13 @@ class RemoteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 50,
+      width: big ? 90 : 50,
       height: 40,
       child: ElevatedButton(
         onPressed: () => _transmitCode(data.code),
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(5),
-          shape: const CircleBorder(),
+          shape: big ? null : const CircleBorder(),
           foregroundColor: Theme.of(context).colorScheme.inversePrimary,
           backgroundColor: data.color,
         ),
